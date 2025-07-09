@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANTALYA TURİZM FUARI
-START UP ZONE & DEMODAY</title>
+    <title>ANTALYA TURİZM FUARI START UP ZONE & DEMODAY</title>
     <style>
         :root {
             --primary-border-color: #ccc;
@@ -46,15 +45,13 @@ START UP ZONE & DEMODAY</title>
         .menu-icon span { display: block; width: 100%; height: 4px; background-color: #555; border-radius: 2px; }
         main { padding-left: 0; }
         
-        /* H1 BAŞLIĞININ ÜSTÜNDEKİ BOŞLUĞU KONTROL ETMEK İÇİN GÜNCELLEME */
         h1 { 
             font-size: 24px; 
             font-weight: normal; 
-            margin-top: 0; /* Tarayıcının eklediği varsayılan üst boşluğu kaldırır */
+            margin-top: 0;
             margin-bottom: 20px; 
             text-align: center; 
         }
-
         h2, h3 { font-size: 18px; font-weight: bold; margin-top: 30px; margin-bottom: 15px; }
         p, ul { font-size: 15px; line-height: 1.6; color: var(--secondary-text-color); }
         ul { padding-left: 20px; }
@@ -79,52 +76,37 @@ START UP ZONE & DEMODAY</title>
         .submit-button:hover { background-color: #e9e9e9; }
         footer { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee; font-size: 13px; color: var(--secondary-text-color); }
 
-        /* ----- YENİ VE GÜNCELLENMİŞ LOGO STİLLERİ ----- */
         .form-logos {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 60px;               /* Büyüyen logolara uyum için aradaki boşluğu biraz daha açtık */
-            margin-bottom: 25px;     /* Başlıkla arasındaki boşluğu azalttık (40px'ten) */
-            padding: 10px 0;         /* Üst ve alt iç boşluğu azalttık */
+            gap: 60px;
+            margin-bottom: 25px;
+            padding: 10px 0;
             flex-wrap: wrap;
         }
-
         .form-logo-item {
             width: auto;  
             height: auto;
         }
-
-        /* 1. Logo (ATF - Geniş) */
-        .form-logos .form-logo-item:nth-child(1) {
-            height: 70px; /* Büyütüldü */
-        }
-
-        /* 2. Logo (AOSB - Ana Logo, Dikey) */
-        .form-logos .form-logo-item:nth-child(2) {
-            height: 125px; /* Belirgin şekilde büyütüldü */
-        }
-
-        /* 3. Logo (İTÜ - Aşırı Geniş) */
-        .form-logos .form-logo-item:nth-child(3) {
-            height: 60px;  /* Büyütüldü ve görsel denge korundu */
-        }
-        /* ----- DEĞİŞİKLİK BURADA BİTİYOR ----- */
+        .form-logos .form-logo-item:nth-child(1) { height: 70px; }
+        .form-logos .form-logo-item:nth-child(2) { height: 125px; }
+        .form-logos .form-logo-item:nth-child(3) { height: 60px; }
         
         .participant-block { border: 1px dashed #ddd; padding: 20px; margin-top: 20px; border-radius: 5px; position: relative; }
         .add-participant-button, .remove-participant-btn { padding: 8px 15px; border: none; border-radius: 4px; color: white; cursor: pointer; font-size: 14px; }
         .add-participant-button { 
-    padding: 10px 25px; /* Biraz daha dolgun buton */
-    border: none; 
-    border-radius: 4px; 
-    color: white; 
-    cursor: pointer; 
-    font-size: 15px; 
-    background-color: var(--add-btn-color); 
-    display: block; 
-    width: auto; /* İçeriğine göre genişlesin */
-    margin: 20px auto 30px auto; /* Üst/alt boşluk ve yatayda ortalama */
-}
+            padding: 10px 25px;
+            border: none; 
+            border-radius: 4px; 
+            color: white; 
+            cursor: pointer; 
+            font-size: 15px; 
+            background-color: var(--add-btn-color); 
+            display: block; 
+            width: auto;
+            margin: 20px auto 30px auto;
+        }
         .add-participant-button:hover { background-color: #218838; }
         .remove-participant-btn { background-color: var(--remove-btn-color); position: absolute; top: 15px; right: 15px; }
         .remove-participant-btn:hover { background-color: #c82333; }
@@ -136,10 +118,64 @@ START UP ZONE & DEMODAY</title>
             margin-bottom: -15px;
         }
         .form-note .note-asterisk {
-            color: var(--required-color); /* Zaten tanımlı olan kırmızı rengi kullanır */
-            font-weight: bold;           /* Yıldızı daha belirgin yapar */
-            font-style: normal;          /* Yıldızın italik olmasını engeller */
-            margin-right: 4px;           /* Yıldız ile metin arasına küçük bir boşluk koyar */
+            color: var(--required-color);
+            font-weight: bold;
+            font-style: normal;
+            margin-right: 4px;
+        }
+
+        
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px 5px; 
+            }
+
+            .container {
+                padding: 20px 15px; 
+                box-shadow: none;   
+            }
+
+            h1 {
+                font-size: 20px;   
+                line-height: 1.4;
+            }
+
+            p, ul, label {
+                font-size: 14px;
+            }
+
+           
+            .form-logos {
+                flex-direction: column;
+                gap: 30px; 
+            }
+
+            
+            .form-logos .form-logo-item {
+                height: auto; 
+            }
+            .form-logos .form-logo-item:nth-child(1) { max-width: 200px; }
+            .form-logos .form-logo-item:nth-child(2) { max-width: 150px; }
+            .form-logos .form-logo-item:nth-child(3) { max-width: 200px; }
+
+            
+            .add-participant-button,
+            .submit-button {
+                width: 100%;
+                box-sizing: border-box; 
+            }
+
+            .participant-block {
+                padding: 15px;
+            }
+
+            .remove-participant-btn {
+                font-size: 12px;
+                padding: 6px 10px;
+                top: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
@@ -168,8 +204,7 @@ START UP ZONE & DEMODAY</title>
                 <img src="itu.png" alt="İTÜ Arı Teknokent Logo" class="form-logo-item">
             </div>
 
-            <h1>ANTALYA TURİZM FUARI
-START UP ZONE & DEMODAY</h1>
+            <h1>ANTALYA TURİZM FUARI<br>START UP ZONE & DEMODAY</h1>
             
           
             <h3></h3>
@@ -352,8 +387,6 @@ START UP ZONE & DEMODAY</h1>
                 <input type="text" id="trade_registry" name="trade_registry" class="form-control" required>
             </div>
 
-
-
             <div class="form-group">
                 <label for="website">8. Web Sitesi URL'si <span class="required">*</span></label>
                 <input type="url" id="website" name="website" class="form-control" required>
@@ -371,8 +404,6 @@ START UP ZONE & DEMODAY</h1>
                     <input type="file" name="logo_file" required/>
                 </div>
             </div>
-
-         
 
             <div class="form-group">
                 <label for="oneliner">11. Start-Up'ınızı sadece 8-10 kelimelik bir cümle ile tanımlayın <span class="required">*</span></label>
@@ -399,8 +430,6 @@ START UP ZONE & DEMODAY</h1>
                 <textarea id="revenue_model" name="revenue_model" class="form-control" required></textarea>
             </div>
             
-            
-
             <div class="form-group">
                 <label for="product_name">16. Ürün adı <span class="required">*</span></label>
                 <input type="text" id="product_name" name="product_name" class="form-control" required>
@@ -408,8 +437,6 @@ START UP ZONE & DEMODAY</h1>
             <div class="form-group">
              <label>17. Ürünün aşamasını belirtiniz. <span class="required">*</span></label>
     <p>Lütfen girişiminizin hangi aşamada olduğunu seçin.</p>
-
-    
     <label><input type="radio" name="asama" value="MVP Hazır (Prototip/Yazılım Hazır)"> MVP Hazır (Prototip/Yazılım Hazır)</label><br>
     <label><input type="radio" name="asama" value="MVP Sonrası (Ürün Hazır, Satış Aşaması)"> MVP Sonrası (Ürün Hazır, Satış Aşaması)</label><br>
     <label><input type="radio" name="asama" value="Ürün hazır, Satış yapılmış"> Ürün hazır, Satış yapılmış</label><br>
@@ -441,22 +468,15 @@ START UP ZONE & DEMODAY</h1>
     <div>
         <label><input type="checkbox" name="tech_vertical[]" value="Turizmde sürdürülebilirlik/Yeşil Dönüşüm"> Turizmde sürdürülebilirlik/Yeşil Dönüşüm (Karbon ayak izi ölçümü, yeşil destinasyon takibi vb.)</label><br>
         <label><input type="checkbox" name="tech_vertical[]" value="Turizmde Dijital Dönüşüm / Akıllı Turizm"> Turizmde Dijital Dönüşüm / Akıllı Turizm (Yapay Zekâ (AI), Büyük Veri ve Analitik, Artırılmış Gerçeklik (AR), Sanal Gerçeklik (VR), Mobil Uygulamalar, Blockchain, IoT (Nesnelerin İnterneti), Akıllı Destinasyon Yönetimi, Dijital Ödeme Sistemleri, robotik otomasyon vb.)</label><br>
-        
-        
-
     </div>
 </div>
-
             
             <div class="form-group">
                 <label for="past_events">23. Hangi uluslararası fuarlara ve start-up etkinliklerine katıldınız? </label>
                 <textarea id="past_events" name="past_events" class="form-control" required></textarea>
             </div>
 
-           
-            <div id="participantsContainer">
-             
-            </div>
+            <div id="participantsContainer"></div>
             
             <button type="button" id="addParticipantBtn" class="add-participant-button">+ Yeni Katılımcı Ekle</button>
            
@@ -469,8 +489,6 @@ START UP ZONE & DEMODAY</h1>
                 <label for="additional_info">25. Ek Bilgiler</label>
                 <textarea id="additional_info" name="additional_info" class="form-control" required></textarea>
             </div>
-            
-            
             
             <p class="form-note"><span class="note-asterisk">*</span>Doldurulması zorunlu alanlar.</p>
 
@@ -485,9 +503,7 @@ START UP ZONE & DEMODAY</h1>
 </div>
 
 <script>
-   
     document.addEventListener('DOMContentLoaded', function() {
-        
         const radios = document.querySelectorAll('input[name="teknopark_var_mi"]');
         const teknoparkDiv = document.getElementById('teknopark_div');
         const teknoparkSelect = document.getElementById('teknopark');
@@ -505,7 +521,6 @@ START UP ZONE & DEMODAY</h1>
             });
         });
 
-       
         const addBtn = document.getElementById('addParticipantBtn');
         const container = document.getElementById('participantsContainer');
         
@@ -525,48 +540,35 @@ START UP ZONE & DEMODAY</h1>
             const participantDiv = document.createElement('div');
             participantDiv.classList.add('participant-block');
             
-          
-
-            let removeButtonHTML = '';
-            if (participantCount > 1) {
-                removeButtonHTML = '<button type="button" class="remove-participant-btn">Bu Katılımcıyı Kaldır</button>';
-            }
-            // --- DEĞİŞİKLİK BURADA BİTİYOR ---
+            let removeButtonHTML = '<button type="button" class="remove-participant-btn">Bu Katılımcıyı Kaldır</button>';
 
             const participantHTML = `
-                ${removeButtonHTML}  <!-- Buton ya dolu ya da boş olacak -->
+                ${removeButtonHTML}
                 <h2 class="form-section-title">${participantCount}. KATILIMCI BİLGİLERİ</h2>
-
                 <div class="form-group">
                     <label for="p_name_${participantCount}">Katılımcının tam adı <span class="required">*</span></label>
                     <input type="text" id="p_name_${participantCount}" name="p_name[]" class="form-control" required>
                 </div>
-
                 <div class="form-group">
                     <label for="p_position_${participantCount}">Start-Up içindeki pozisyon <span class="required">*</span></label>
                     <input type="text" id="p_position_${participantCount}" name="p_position[]" class="form-control" required>
                 </div>
-                
                 <div class="form-group">
                     <label for="p_email_${participantCount}">E-posta adresi <span class="required">*</span></label>
                     <input type="email" id="p_email_${participantCount}" name="p_email[]" class="form-control" required>
                 </div>
-                
                 <div class="form-group">
                     <label for="p_dob_${participantCount}">Doğum tarihi <span class="required">*</span></label>
                     <input type="date" id="p_dob_${participantCount}" name="p_dob[]" class="form-control" required>
                 </div>
-
                 <div class="form-group">
                     <label for="p_id_${participantCount}">Ulusal Kimlik (TC Kimlik) No <span class="required">*</span></label>
                     <input type="text" id="p_id_${participantCount}" name="p_id[]" class="form-control" required>
                 </div>
-                
                 <div class="form-group">
                     <label for="p_education_${participantCount}">Eğitim geçmişi <span class="required">*</span><span class="instruction">Üniversite, bölüm/program, mezuniyet yılı.</span></label>
                     <textarea id="p_education_${participantCount}" name="p_education[]" class="form-control" required></textarea>
                 </div>
-                
                 <div class="form-group">
                     <label for="p_linkedin_${participantCount}">Kişisel LinkedIn Profilinin Bağlantısı </label>
                     <input type="url" id="p_linkedin_${participantCount}" name="p_linkedin[]" class="form-control" required>
@@ -586,7 +588,7 @@ START UP ZONE & DEMODAY</h1>
             }
         });
 
-        addParticipant(); // Sayfa yüklendiğinde ilk katılımcıyı ekle (butonsuz olacak)
+        addParticipant(); 
     });
 </script>
 
